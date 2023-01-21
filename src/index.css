@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Epilogue, sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    --very-dark-color: rgb(23 35 57);
+    --dark-color: rgb(73 86 109);
+    --neutral-color: rgb(243 237 231);
+    --accent-color: rgb(250 248 246);
+
+    /* Super-blend */
+    --top-color: rgb(160 96 255);
+    --middle-color: rgb(203 48 227);
+    --bottom-color: rgb(255 168 78);
+    --border: 15px;
+}
+
+.container-absolute {
+    max-width: 1200px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+[class^="button"] {
+    text-transform: capitalize;
+    font-weight: 700;
+    border-radius: 5px;
+    background: none;
+}
+
+.button-logo-top {
+    font-size: 1.1em;
+    padding: 15px;
+    max-width: 300px;
+    border: 2px solid var(--very-dark-color);
+}
+
+.button-main {
+    max-width: 225px;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: var(--very-dark-color);
+    color: var(--accent-color);
+}
+
+.container-logo-top {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-text-main {
+    max-width: 375px;
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+}
+
+.solution-word {
+    position: relative;
+}
+
+.curved-main {
+    scale: 0.57;
+    position: absolute;
+    top: -39px;
+    left: -60px;
+}
+
+.title-main {
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+.paragraph-main {
+    color: var(--dark-color);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.container-main {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.container-stats {
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+}
+
+.stat {
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
+.number {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.profile-container {
+    gap: 25px;
+    padding: 225px 25px 50px;
+    position: relative;
+    z-index: -10;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: var(--very-dark-color);
+    border-radius: 15px;
+    margin-top: 250px;
+    text-align: center;
+}
+
+[class^="img-profile"] {
+    position: absolute;
+    top: -200px;
+}
+
+.blur {
+    width: 100%;
+    position: absolute;
+    z-index: -5;
+    top: 25%;
+    scale: 1.5;
+}
+
+.title-profile {
+    font-size: 2.25em;
+    color: var(--accent-color);
+}
+
+.paragraph-profile {
+    color: var(--neutral-color);
+}
+
+.name-profile {
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.ocupation-profile {
+    text-transform: uppercase;
+    color: var(--neutral-color);
+}
+
+.container-logo-bottom {
+    text-align: center;
+    padding: 50px 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.container-socials {
+    display: flex;
+    gap: 25px;
+}
+
+/* mobile no mostrar */
+
+.img-portrait {
+    display: none;
+}
+
+.img-profile-large {
+    display: none;
+}
+
+.container-text-profile {
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+    max-width: 450px;
+}
+
+.img-mobile-priori > img {
+    width: 100%;
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+    .img-profile-large {
+        display: block;
+    }
+
+    .img-portrait {
+        display: block;
+    }
+
+    .img-landscape {
+        display: none;
+    }
+
+    .img-profile-small {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .container-main {
+        margin-bottom: 330px;
+        gap: 250px;
+        padding-top: 165px;
+    }
+
+    .container-text-main {
+        max-width: 550px;
+        align-self: start;
+    }
+
+    .button-main {
+        max-width: 280px;
+    }
+
+    .curved-main {
+        scale: 0.8;
+        left: -25px;
+    }
+
+    .img-portrait {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -5;
+    }
+
+    .title-main {
+        font-size: 3.5rem;
+    }
+
+    .paragraph-main {
+        max-width: 350px;
+    }
+
+    .container-stats {
+        width: 100%;
+        flex-flow: row nowrap;
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    .stat {
+        font-size: 1.5em;
+    }
+
+    .profile-container {
+        font-size: 1.3em;
+        padding: 375px 75px 50px;
+    }
+
+    [class^="img-profile"] {
+        position: absolute;
+        top: -250px;
+    }
+
+    .container-logo-bottom {
+        gap: 0;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    [class^="container-logo"] {
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container-main {
+        height: 600px;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .img-profile-large {
+        position: relative;
+        top: -50px;
+    }
+
+    .profile-container {
+        flex-flow: row;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .container-text-profile {
+        text-align: left;
+        gap: 50px;
+        justify-content: space-evenly;
+        height: 600px;
+    }
+
+    .title-profile {
+        font-size: 3.5em;
+    }
+
+    .paragraph-profile {
+        font-size: 1.5em;
+    }
+
+    .curved-main {
+        scale: 1;
+        left: 5px;
+    }
+
+    .title-main {
+        font-size: 4.5em;
+    }
+
+    .container-text-main {
+        max-width: 700px;
+        gap: 75px;
+    }
+
+    .curved-profile {
+        align-self: flex-start;
+        margin-top: 150px;
+    }
+
+    .paragraph-main {
+        max-width: 450px;
+        font-size: 1.5em;
+    }
+
+    .container-stats {
+        font-size: 1.5em;
+        margin-right: 100px;
+    }
+
+    .stat {
+        text-align: left;
+    }
+
+    .img-portrait {
+        position: absolute;
+        z-index: -5;
+        left: 485px;
+        top: 0;
+    }
+
+    .container-logo-bottom {
+        gap: 0;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    [class^="container-logo"] {
+        font-size: 1.25em;
+    }
+}
